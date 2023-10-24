@@ -1,0 +1,107 @@
+Welcome to the world of SuperPy, a sophisticated Python project designed to streamline your inventory management and sales processes. 
+Let's embark on a journey through its features and commands, ensuring you make the most out of this powerful tool.
+
+Installation:
+
+First things first, install the required dependencies by executing the following command:
+
+pip install -r /path/to/requirements.txt
+Activate the virtual environment with:
+source ./env/bin/activate
+
+--------
+
+Buy:
+
+To initiate a purchase, command SuperPy with:
+
+python main.py buy
+Tailor your purchase with these arguments:
+
+--name or -n: "Product name"
+--price or -p: "Buying price of the product"
+--amount or -a: "Amount of products" (default is 1)
+--expiration or -e: "Expiration in days from the current day" (default is 10 days)
+Examples:
+
+python main.py buy -n Banana -p 0.55
+This acquires a single banana for 0.55, expiring in 10 days.
+
+
+python main.py buy -n Banana -p 0.45 -a 15 -e 5
+This procures 15 bananas at 0.45, expiring in 5 days.
+
+--------
+
+Sell:
+
+To facilitate a sale, utilize the command:
+
+python main.py sell
+Tailor your sale with these arguments:
+
+--name or -n: "Product name"
+--price or -p: "Selling price of the product"
+--amount or -a: "Amount of products" (default is 1)
+Examples:
+
+python main.py sell -n banana -p 0.75
+This sells 1 banana for 0.75.
+
+python main.py sell -n banana -p 0.85 -a 10
+This dispenses 10 bananas for 0.85.
+
+--------
+
+Advance:
+
+To propel the internal date forward, invoke:
+
+python main.py advance
+Optionally, specify the number of days to advance with:
+
+python main.py advance -d 5
+This progresses the program by 5 days.
+
+--------
+Report:
+
+Generate detailed reports for inventory, revenue, or profit with:
+
+python main.py report [inventory|revenue|profit]
+For a nuanced inventory report, use:
+
+python main.py report inventory
+This exhibits a table of current products in stock.
+
+--------
+
+For revenue and profit, customize your report with:
+
+--today: Report for today
+--yesterday: Report for yesterday
+--date [day|week|month|year]: Report for a specific date
+Examples:
+
+python main.py report revenue --today
+This furnishes the revenue report for today.
+
+python main.py report profit --date 01-2020
+This supplies the profit report for January 2020.
+
+--------
+Reset:
+
+To obliterate all CSV files and reset the date, execute:
+
+python main.py reset
+Exercise caution, as this action erases all your data.
+
+--------
+
+Demo:
+
+For testing purposes, engage the demo option:
+
+python main.py demo
+This loads demo data from a .json file and sets the date. Dive into SuperPy and experience the seamless management of your inventory and sales processes!
